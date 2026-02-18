@@ -21,13 +21,24 @@ Install example:
 pip install plyvel
 ```
 
+You can also create a virtual environment first, if you do not want to change your global environment:
+
+```bash
+cd ldb-access
+python3 -m venv venv
+source ./venv/bin/activate
+python3 -m pip install plyvel
+```
+
+Just rememeber to execute `source ./venv/bin/activate` before running the scripts another day.
+
 ## Folder Layout
 
 The scripts default to this structure inside `ldb-access/`:
 
-- `in/`: Source LevelDB DB directories from FoundryVTT
-- `out/`: Extracted JSON output
-- `deploy/`: Rebuilt LevelDB output
+- `in/`: Source LevelDB DB directories from FoundryVTT (files incoming from your FoundryVTT installation)
+- `out/`: Extracted JSON output (the outgoing files in a readable format)
+- `deploy/`: Rebuilt LevelDB output (outgoing files ready to deploy)
 
 The input folder should contain module sub-folders, like `in/myown-core-system`.
 
